@@ -63,6 +63,7 @@ app.get("/order-tacos/:protein/:numTacos", (req, res) => {
 
   res.send(`Thanks for your order! You ordered ${numTacos} ${protein} tacos.`);
 });
+
 // --------------------------------
 // 🚀 LEVEL 1 CHALLENGES
 // --------------------------------
@@ -88,7 +89,7 @@ app.get("/happy-birthday", (req, res) => {
 // 1. 🏆 Add a /happy-birthday/:name endpoint says "Happy birthday, [name]!!!"
 
 app.get("/happy-birthday/:name", (req, res) => {
-  const name = "jj";
+  const name = req.params.name;
   //the res.send() method sends back a string as a response
   res.send(`Happy birthday, ${name}!`);
 });
