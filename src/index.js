@@ -52,6 +52,7 @@ app.get("/get-user", (req, res) => {
 // http://localhost:3000/get-user/Nicole -> Hello, Nicole!
 
 app.get("/get-user/:username", (req, res) => {
+  const userName = req.params.username;
   //the res.send() method sends back a string as a response
   res.send(`Hello, ${userName}!`);
 });
